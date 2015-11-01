@@ -5,6 +5,7 @@ addons:
     - texlive-latex-recommended
     - texlive-latex-extra
     - texlive-fonts-recommended
+    - lmodern
     - rubber
 script:
 - bash rubber.sh
