@@ -1,23 +1,17 @@
 language: ruby
-
 addons:
   apt:
     packages:
-      - texlive-latex-recommended
-      - texlive-latex-extra
-      - texlive-fonts-recommended
-      - rubber
-
+    - texlive-latex-recommended
+    - texlive-latex-extra
+    - texlive-fonts-recommended
+    - rubber
 script:
-  - bash rubber.sh
-
+- bash rubber.sh
 deploy:
   provider: releases
   api_key:
-    secure: UFJLRu6WMLjtAiJfJrdTyJ7fxIXiSy3low8u55URmmHLlemgF94p/LwBSLQj4y0vjOzyJOdoEcX7oiLlW1VFVJLvAcnfkA9z09+olvfRmydzVgpFC/4LXnAt+bJPheQy8VAupiXiv70LebnqBOOrGipdAibO5ZVxwvhmuLri8/z4ntHwYY6RUliqp6mswyaEwASoCmwjqsIXiMfSEZ0hXGzrB21qhfIEGJ8a41dNFmxKp0hLcB29XVFmmGpVEqRrmAoEzO+JPp8Df8o1nSa/Hl5zlxB0zi0xxT9QQYBzd43+4ItmBsqEbG4aJmoAb7s5yvDpSnvSiVB2oJrtnlr5DFNriMYpRSJIoDCx+WhlVPhN+gZwru8ejOP9rUCdV+N9dldIfRXhIsEkQ9Phi4qkbT7kFPT6DVhjymp+p4CLOq/FFVdfRxAQ5J8t6xd6z1r3k7ry9BV5HyLd0qkj4G1WCMDIRSWutuBhTWJOKqpiumNpaJDB1TqfS7EljZYidj36Y9QxFxapLeevuTtV/iND0E1Kfp2YYoT6ULGA1vTuOIK3+Q0Vl96+GLN0l+/FJpoPTLHyr2njVnGiYqi8oOBKQvYj1Mjc6Nv5PKI9f3RSLYxCYxxU1Tg9uSj2xi1otfB5UyEvr6Gtmcr7Co5ONX7hR3D62ZsJUyYc+S6XlAoQBkA=
-  file: Bernardo-Sulzbach-CV.pdf
-  skip_cleanup: true
+    secure: b6OKfHsAT7I0+t+g5iMAwcQz82a3Jlw7fenrn1NG/ZrYkfOE5W49AMJiTxhmuBBuzSEbNVB0ASxN1rLyxrkO9/pjn1AvRiE74ykO3zCKNvliZxP2YZZtAgKwaBqssf2hrn0weAAXQP/DrI+f9LCEiniRGoHTqA5VOi3w0vg14EEkeU23WoVUy2YDb4Ng3r0mTVp0RXbbVxUcfsFJrHksabpeaAIrlK2idR6Zw8PlrJxel8IyRqjLFCMURaGZm+YHxULBtJeLryp3mzNrfwfhtXzLZnAQE+dsocTPtDSvtX2kWEvfctZorRIBx8Vyhm0uKgR+ypFYtj8R7pVf8brPnIQ1aSOhBDTB8bvQKpoCvTocx5QlxFobTFgTBJwLe+gMtvESzUsmtYwHXqdRECC4XIdEjE8RPc2WnzmtuTX7waOKE9WkwyNuGL2RHuAwaHqrDKfW3mJ7aM2ul1VX13iNFU98FX0I65PyY6vPOJ0ynQVO+UHTy45tpIYQ7825ZJkWHy8GKKDy25ZlZExN5D2YAMAA78lOr8+GNTwbraLcgiqDFkUpsaG0FvKGsAgmfQIM28If+AsPM7OkweZngPkW2NnGTEhmqyzAtRB1kCobIkppXI2i9oK/Fr0ISxIwAaWKrQU6DOgQI+1QtrndIU8U3nS8byDk40kC04dWym6J+Bk=
+  file: CV.pdf
   on:
-    tags: true
-    all_branches: true
     repo: mafagafogigante/cv
