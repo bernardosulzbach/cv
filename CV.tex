@@ -1,11 +1,3 @@
-% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
-% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
-% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
-%
-% (c) 2012 Scott Clark <sc932@cornell.edu> cam.cornell.edu/~sc932
-%
-%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License.
-
 \documentclass[letterpaper,11pt]{article}
 \newlength{\outerbordwidth}
 \pagestyle{empty}
@@ -19,15 +11,13 @@
 \usepackage{tocloft}
 \usepackage{hyperref}
 
-%-----------------------------------------------------------
-%Edit these values as you see fit
+% Edit these values as you see fit
 
 \setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
 \definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
 \definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
 
-%-----------------------------------------------------------
-%Margin setup
+% Margin setup
 
 \setlength{\evensidemargin}{-0.25in}
 \setlength{\headheight}{0in}
@@ -42,8 +32,7 @@
 \setlength{\topskip}{0in}
 \setlength{\voffset}{0.1in}
 
-%-----------------------------------------------------------
-%Custom commands
+% Custom commands
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
 \newcommand{\resheading}[1]{\vspace{8pt}
   \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
@@ -58,8 +47,6 @@
   \textit{#3} & \textit{#4} \\
 \end{tabularx}\vspace{-6pt}}
 \newcommand{\email}[1]{\href{mailto:#1}{#1}}
-%-----------------------------------------------------------
-
 
 \begin{document}
 
@@ -72,7 +59,6 @@ Rua Jos\'e Horn, 174, Estrela, Rio Grande do Sul, Brasil
   & \href{http://mafagafogigante.org}{mafagafogigante.org} \\
 \end{tabular*}
 \\
-
 
 \resheading{Education}
 \begin{itemize}
@@ -109,4 +95,3 @@ Rua Jos\'e Horn, 174, Estrela, Rio Grande do Sul, Brasil
 \end{center}\vspace*{-16pt}
 
 \end{document}
-
