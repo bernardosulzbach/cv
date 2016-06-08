@@ -1,14 +1,11 @@
 language: ruby
-addons:
-  apt:
-    packages:
-    - texlive-latex-recommended
-    - texlive-latex-extra
-    - texlive-fonts-recommended
-    - lmodern
-    - rubber
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra rubber
+
 script:
-- bash rubber.sh
+  - bash rubber.sh
+
 deploy:
   provider: releases
   api_key:
