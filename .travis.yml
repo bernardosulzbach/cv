@@ -1,0 +1,15 @@
+language: ruby
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra rubber
+
+script:
+- bash rubber.sh
+
+deploy:
+  provider: releases
+  api_key:
+    secure: vsqdoTBZeMCFXVrfStFbcyNaDGO2N2eUN2+OpxlJvz7nqcyuf4SNCfCbsOF2FBCCVQKTpvKJSfcgvqsrAeDHSC/riv1KusQGFUSkqeDFmFsr5yD41RooNaftTv0xdxTzoThduu8DcLC6clesnYYjjG6kCLP6Uu/89vU3HB4adhoT8KHqP0YZuRgpy8zqwxRWQTxz5bP8e61/DBlFV5HRAaSVPiw6B1RfuaPm94hzyHYGJLaPr4Yaz6dVB3H8mISjkZ1Cwmu3Y9R7kDzLvvxO46aNZgZclbORDUCVxKhynIiqu8/Qm6RH6ww3AN7/w2IhtYurf5eSTcKCUbZDdn1Ons6zk82mrKNXc1KBN8Uq6eKgaZNNDCdqW8Hm0tk1SURIpvkLQNgoZfNwe0QUpToHp/9rJcUapTvqswPXVWzIzAakq5azO5tZUhdpm3rtL77WPXA8itelawfIq/MXk/j8D5emXy6LxqIZUJdVe2Q8y1eLvg+1BIn9LJM3FfHk28zHadP1sn+kq5LvaXwrF7ZaGKyoHoNaeR51oq95/JFD6uhSfUAu2lyITyWaNXKKbyDC9Zst0MkVv0zYMTJ25M15dtl+QoaM+5+u0Rsf8NpbFvyKbkB64QvHFGpDmQ1IEBrrgqSRFnhPc9N8d7CmlAXehlnA7cRTBAKnIXBxSukdvhs=
+  file: CV.pdf
+  on:
+    repo: mafagafogigante/cv
