@@ -17,5 +17,4 @@ deploy:
   file: CV.pdf
   skip_cleanup: true
   on:
-    repo: mafagafogigante/cv
     tags: true
