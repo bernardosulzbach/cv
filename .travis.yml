@@ -1,11 +1,18 @@
-language: ruby
-
-sudo: required
-dist: trusty
-
-before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra rubber
+addons:
+  apt:
+    packages:
+    - biber
+    - ghostscript
+    - latex-xcolor
+    - lmodern
+    - rubber
+    - texlive-bibtex-extra
+    - texlive-extra-utils
+    - texlive-fonts-extra
+    - texlive-fonts-recommended
+    - texlive-latex-extra
+    - texlive-latex-recommended
+    - texlive-math-extra
 
 script:
 - bash rubber.sh
@@ -13,8 +20,10 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: vsqdoTBZeMCFXVrfStFbcyNaDGO2N2eUN2+OpxlJvz7nqcyuf4SNCfCbsOF2FBCCVQKTpvKJSfcgvqsrAeDHSC/riv1KusQGFUSkqeDFmFsr5yD41RooNaftTv0xdxTzoThduu8DcLC6clesnYYjjG6kCLP6Uu/89vU3HB4adhoT8KHqP0YZuRgpy8zqwxRWQTxz5bP8e61/DBlFV5HRAaSVPiw6B1RfuaPm94hzyHYGJLaPr4Yaz6dVB3H8mISjkZ1Cwmu3Y9R7kDzLvvxO46aNZgZclbORDUCVxKhynIiqu8/Qm6RH6ww3AN7/w2IhtYurf5eSTcKCUbZDdn1Ons6zk82mrKNXc1KBN8Uq6eKgaZNNDCdqW8Hm0tk1SURIpvkLQNgoZfNwe0QUpToHp/9rJcUapTvqswPXVWzIzAakq5azO5tZUhdpm3rtL77WPXA8itelawfIq/MXk/j8D5emXy6LxqIZUJdVe2Q8y1eLvg+1BIn9LJM3FfHk28zHadP1sn+kq5LvaXwrF7ZaGKyoHoNaeR51oq95/JFD6uhSfUAu2lyITyWaNXKKbyDC9Zst0MkVv0zYMTJ25M15dtl+QoaM+5+u0Rsf8NpbFvyKbkB64QvHFGpDmQ1IEBrrgqSRFnhPc9N8d7CmlAXehlnA7cRTBAKnIXBxSukdvhs=
+    secure: df4YJaK0xFB/oCmNZYq6kQ+J/gSC33e4BpEEO41o023mstA5oHrQ6XxjEKSxca/+7WIZSsE6EzsmhJ6vait6yclIn+IDZg9nHvZ4yzmIpW9+cs0YQVCJNIrkUoCH4URCbtVTJ/HbhDHsGKZb9clRyHICE/hnymfJBtXHB3hyUSJzLzLQVCKKudis2BPQ1H/ylfMR3m6YKVjUhWhA2G98K6wyt0RKIUdYxp3VWNyji505EJjV0ocT9zWI46FF3zywmMRQm2wZ6JZ7SyD1Dy3trq7spHAoFLKjb9gWGkKQAsrMbisHjJRrEbvNBRIpYuKtqzij33dL45J6DF/W7LEJsjlhEKpPRAKDfninPgBkFT1UcbM/HTDfPYhEINs6rhi4UAgUrAaVKHV4Jb8KvfdQnf8hUifmEuvsSwMvXTdDYd7Z1t1YdIAYFtoZMzyhEwRRm4nWky48GtI/Rfsb/+wB6NJFsDjjW+cG2R2bGobbrL2lmmaU6s1ragSMk+q6hWi9xFXmbeaw177QObmOKrFlzCIocvH+FhrU3PtQYFePJqMroyPAfz11aDbwvBFr/Fpe3Hcp5PEmimlLyCmFGpUNMYAQ0q7aasg3thJty90JzCYw4P4e84AopSBfY51iP0G3HYIusTwDb3ObJoH3C5K5N4S+ecPlTgJFx/uzsByVRDk=
   file: CV.pdf
   skip_cleanup: true
   on:
     tags: true
+    all_branches: true
+    repo: bernardosulzbach/cv
