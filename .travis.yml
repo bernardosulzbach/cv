@@ -1,12 +1,11 @@
-# Ubuntu 16.04
-dist: xenial
+# Ubuntu 20.04
+dist: focal
 
 addons:
   apt:
     packages:
     - biber
     - ghostscript
-    - latex-xcolor
     - lmodern
     - rubber
     - texlive-bibtex-extra
@@ -15,7 +14,7 @@ addons:
     - texlive-fonts-recommended
     - texlive-latex-extra
     - texlive-latex-recommended
-    - texlive-math-extra
+    - texlive-science
 
 script:
 - bash rubber.sh
