@@ -3,19 +3,26 @@
 \pagestyle{empty}
 \raggedbottom
 \raggedright
-\usepackage{color}
+
+\usepackage{xcolor}
 \usepackage{framed}
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{tocloft}
-\usepackage{hyperref}
 
-% Edit these values as you see fit
+\usepackage[ocgcolorlinks]{hyperref}
+% This package lets you instruct the printer driver to print all hyperlink targets in black regardless of the actual color(s) used in the document.
+% \usepackage[backgroundcolour=black]{hrefhide}
+% Seems like this is Android Wear Deep Purple 40%.
+\definecolor{violet}{HTML}{3A2166}
+\hypersetup{colorlinks=true,allcolors=violet}
+
+% Edit these values as you see fit.
 \setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
 \definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
 \definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
 
-% Margin setup
+% Margin setup.
 \setlength{\evensidemargin}{-0.25in}
 \setlength{\headheight}{0in}
 \setlength{\headsep}{0in}
@@ -32,11 +39,11 @@
 \usepackage[default]{lato}
 \usepackage[T1]{fontenc}
 
-% Make bullets smaller
+% Make bullets smaller.
 %\renewcommand\labelitemi{{\boldmath\(\cdot\)}}
 \renewcommand\labelitemi{\raisebox{2pt}{\tiny\(\bullet\)}}
 
-% Custom commands
+% Custom commands.
 \newcommand{\resitem}[1]{\item #1}
 \newcommand{\resheading}[1]{
   \vspace{10pt}
@@ -59,20 +66,20 @@
     Software Engineer
   & \email{bernardo@bernardosulzbach.com} \\
     Porto Alegre, Rio Grande do Sul, Brazil
-  & \href{http://www.bernardosulzbach.com}{www.bernardosulzbach.com} \\
+  & \href{https://www.bernardosulzbach.com}{bernardosulzbach.com} \\
 \end{tabular*}
 
 \resheading{Education}
 \begin{itemize}
-    \resitem \ressubheading{Col\'egio Martin Luther}{Estrela, Rio Grande do Sul, Brazil}{High School}{2013 -- 2015}
-    \resitem \ressubheading{Universidade Federal do Rio Grande do Sul}{Porto Alegre, Rio Grande do Sul, Brazil}{BSc Computer Science}{2016 -- Present Time}
+    \resitem \ressubheading{Colégio Martin Luther}{Estrela, Rio Grande do Sul, Brazil}{High School}{2013 -- 2015}
+    \resitem \ressubheading{Universidade Federal do Rio Grande do Sul}{Porto Alegre, Rio Grande do Sul, Brazil}{B.Sc. Computer Science (3.64 GPA)}{2016 -- 2019}
 \end{itemize}
 
 \resheading{Career}
 \begin{itemize}
-    \resitem \ressubheading{Juptr GmbH}{Remote, full-time}{Back End Software Engineer}{December of 2015 -- June of 2016}
+    \resitem \ressubheading{Juptr.io GmbH}{Remote, full-time}{Back End Software Engineer}{December of 2015 -- June of 2016}
         \begin{itemize}
-                \resitem{Implemented Directional Cubic Convolution Interpolation}
+                \resitem{Implemented directional cubic convolution interpolation}
                 \resitem{Implemented industrial-strength high-throughput textual geoparsing}
                 \resitem{Designed parsers and extractors for Wikipedia dumps for machine learning}
         \end{itemize}
@@ -83,6 +90,7 @@
     \resitem
         \ressubheading{Dungeon}{\href{https://github.com/bernardosulzbach/dungeon/}{See the Repository}}{Role-Playing Game}{December of 2014 -- Present Time}
         \begin{itemize}
+            % TODO: mention the 1K award
             \resitem Over 10,000 lines of object-oriented Java with strict coding guidelines
             \resitem Test-driven development with known test coverage
             \resitem Continuous integration and automated releases
@@ -95,6 +103,10 @@
         \end{itemize}
 \end{itemize}
 
+See also \href{https://www.bernardosulzbach.com/portfolio/}{bernardosulzbach.com/portfolio} for more projects and images.
+
+See also \href{https://www.bernardosulzbach.com/open-source/}{bernardosulzbach.com/open-source} for some of my open-source contributions.
+
 \resheading{Experience}
 \begin{itemize}
     \setlength\itemsep{0em}
@@ -103,6 +115,8 @@
     \resitem Test-driven development
     \resitem Computer graphics with OpenGL
     \resitem Continuous integration and continuous delivery
+    \resitem Design patterns and design principles
+    \resitem Relational databases, including MySQL, PostgreSQL, and SQLite
     \resitem Design patterns and design principles
     \resitem Windows and Linux environments
 \end{itemize}
