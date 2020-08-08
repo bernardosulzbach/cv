@@ -1,9 +1,10 @@
-\documentclass[letterpaper,10pt]{article}
+\documentclass[10pt]{article}
 \newlength{\outerbordwidth}
 \pagestyle{empty}
 \raggedbottom
 \raggedright
 
+% Packages
 \usepackage[english]{babel}
 \usepackage{xcolor}
 \usepackage{framed}
@@ -11,34 +12,33 @@
 \usepackage{array}
 \usepackage{tocloft}
 
+% \usepackage[letterpaper,margin=0.5in]{geometry} % Letter mode
+\usepackage[a4paper,margin=1cm]{geometry} % A4 mode
+
 \usepackage[ocgcolorlinks]{hyperref}
+
 % This package lets you instruct the printer driver to print all hyperlink targets in black regardless of the actual color(s) used in the document.
 % \usepackage[backgroundcolour=black]{hrefhide}
 % Seems like this is Android Wear Deep Purple 40%.
 \definecolor{violet}{HTML}{3A2166}
 \hypersetup{colorlinks=true,allcolors=violet}
 
-% Edit these values as you see fit.
-\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
-\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
-\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
-
-% Margin setup.
-\setlength{\evensidemargin}{-0.25in}
-\setlength{\headheight}{0in}
-\setlength{\headsep}{0in}
-\setlength{\oddsidemargin}{-0.25in}
-\setlength{\paperheight}{11in}
-\setlength{\paperwidth}{8.5in}
-\setlength{\tabcolsep}{0in}
-\setlength{\textheight}{10in}
-\setlength{\textwidth}{7in}
-\setlength{\topmargin}{-0.6in}
-\setlength{\topskip}{0in}
-\setlength{\voffset}{0.1in}
+\usepackage{enumitem}
+\setitemize{labelindent=0.25cm,labelsep=0.25cm,leftmargin=*}
 
 \usepackage[default]{lato}
 \usepackage[T1]{fontenc}
+
+% Edit these values as you see fit.
+\setlength{\outerbordwidth}{3pt}      % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93} % Inner background color of title bars
+
+% Margin setup.
+% \setlength{\paperheight}{11in} % Letter mode
+% \setlength{\paperwidth}{8.5in} % Letter mode
+\setlength{\paperheight}{297mm} % A4 mode
+\setlength{\paperwidth}{210mm} % A4 mode
 
 % Make bullets smaller.
 %\renewcommand\labelitemi{{\boldmath\(\cdot\)}}
@@ -46,6 +46,7 @@
 
 % Custom commands.
 \newcommand{\resitem}[1]{\item #1}
+
 \newcommand{\resheading}[1]{
   \vspace{10pt}
   \textbf{\large #1}
@@ -53,15 +54,18 @@
 }
 
 \newcommand{\ressubheading}[4]{
-\begin{tabularx}{6.5in}{X<{\cftdotfill{\cftsecdotsep}}@{}r}
+  % This is used in items, so we must discount the left margin.
+\begin{tabularx}{\linewidth}{X<{\cftdotfill{\cftsecdotsep}}@{}r}
   \textbf{#1} & #2 \\
-  #3 & #4 \\
+           #3 & #4 \\
 \end{tabularx}\vspace{-4pt}}
+
 \newcommand{\email}[1]{\href{mailto:#1}{#1}}
 
 \begin{document}
 
-\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\setlength\tabcolsep{0pt} % Prevent margins around the header.
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 \textbf{\Large Bernardo Sulzbach}
   & \textbf{\today} \\
     Software Engineer
@@ -99,7 +103,7 @@
     \resitem
         \ressubheading{Walls of Doom}{\href{https://github.com/bernardosulzbach/walls-of-doom/}{See the Repository}}{Retro Platformer}{April of 2016 -- Present Time}
         \begin{itemize}
-            \resitem Gradual migration from pure ANSI C code to modern C++
+            \resitem Migration from ANSI C code to modern C++
             \resitem Game physics and I/O written from scratch
         \end{itemize}
 \end{itemize}
@@ -137,7 +141,7 @@ See also \href{https://www.bernardosulzbach.com/open-source/}{bernardosulzbach.c
 
 \resheading{Awards}
 \begin{center}
-    \begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
         \multicolumn{2}{c}{Bronze Medal in Brazilian High School National Chemistry Olympiad \cftdotfill{\cftdotsep} 2014}\\
         \multicolumn{2}{c}{First Place in Regional Mathematics Olympiad \cftdotfill{\cftdotsep} 2008, 2011, 2014}\\
         \multicolumn{2}{c}{Notable Student in local Scientific Olympiad \cftdotfill{\cftdotsep} 2013}\\
